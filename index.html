@@ -3,10 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Page</title>
+  <title>FocusDo — 투두 + 집중 타이머</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0F0F0F;
+      color: #FFFFFF;
+      min-height: 100vh;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: linear-gradient(180deg, #1A1A2E 0%, #0F0F0F 100%);
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      background: linear-gradient(135deg, #6C63FF, #4ECDC4);
+      border-radius: 24px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #6C63FF, #4ECDC4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #9E9E9E;
+      max-width: 480px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1A1A1A;
+      border: 1px solid #2C2C2C;
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: #9E9E9E;
+      margin: 4px;
+    }
+
+    .badge span {
+      color: #6C63FF;
+      font-weight: 600;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #6C63FF;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 32px;
+      transition: opacity 0.2s;
+    }
+
+    .store-btn:hover { opacity: 0.85; }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #1A1A1A;
+      border: 1px solid #2C2C2C;
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #9E9E9E;
+      line-height: 1.6;
+    }
+
+    .accent-purple { border-top: 3px solid #6C63FF; }
+    .accent-teal   { border-top: 3px solid #4ECDC4; }
+    .accent-red    { border-top: 3px solid #FF6B6B; }
+    .accent-green  { border-top: 3px solid #4CAF50; }
+
+    .status-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #1A1A1A;
+      border: 1px solid #2C2C2C;
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-gray   { background: #9E9E9E; }
+    .dot-purple { background: #6C63FF; box-shadow: 0 0 8px #6C63FF88; }
+    .dot-green  { background: #4CAF50; }
+    .dot-muted  { background: #616161; }
+
+    .status-item strong { font-size: 15px; }
+    .status-item span   { font-size: 13px; color: #9E9E9E; margin-left: auto; }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid #2C2C2C;
+      color: #616161;
+      font-size: 13px;
+    }
+
+    footer a { color: #6C63FF; text-decoration: none; }
+  </style>
 </head>
 <body>
-  <h1>FocusDo</h1>
-  <p>투두리스트 + 집중 타이머 앱</p>
+
+  <div class="hero">
+    <div class="app-icon">✓</div>
+    <h1>FocusDo</h1>
+    <p>할 일을 정하고, 집중하는 시간을 기록하고,<br>하루를 돌아보는 스마트 생산성 앱</p>
+    <div>
+      <span class="badge">📱 Android <span>출시 중</span></span>
+      <span class="badge">🍎 iOS <span>준비 중</span></span>
+    </div>
+    <br>
+    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.tjdal.focusdo" target="_blank">
+      ▶ Google Play에서 다운로드
+    </a>
+  </div>
+
+  <section>
+    <h2>주요 기능</h2>
+    <div class="cards">
+      <div class="card accent-purple">
+        <div class="card-icon">📋</div>
+        <h3>스마트 투두 관리</h3>
+        <p>날짜별 할 일을 관리하고 드래그로 순서를 변경하세요. 완료율을 한눈에 확인할 수 있습니다.</p>
+      </div>
+      <div class="card accent-teal">
+        <div class="card-icon">⏱</div>
+        <h3>집중 타이머</h3>
+        <p>카운트다운 또는 스톱워치 모드로 할 일에 온전히 집중하세요. 화면 켜짐 유지 지원.</p>
+      </div>
+      <div class="card accent-red">
+        <div class="card-icon">🎯</div>
+        <h3>전체화면 집중 모드</h3>
+        <p>방해 없이 하나의 작업에만 집중하는 몰입 모드. 완료 시 진동 피드백 제공.</p>
+      </div>
+      <div class="card accent-green">
+        <div class="card-icon">📊</div>
+        <h3>하루 결산 리포트</h3>
+        <p>하루 집중 시간 합계, 완료율, 주간 통계 그래프로 나의 생산성을 시각화합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>투두 상태 흐름</h2>
+    <div class="status-row">
+      <div class="status-item">
+        <div class="dot dot-gray"></div>
+        <strong>PENDING</strong>
+        <span>기본 상태 — 아직 시작 전</span>
+      </div>
+      <div class="status-item">
+        <div class="dot dot-purple"></div>
+        <strong>IN PROGRESS</strong>
+        <span>집중 모드 실행 중 — 타이머 동작</span>
+      </div>
+      <div class="status-item">
+        <div class="dot dot-green"></div>
+        <strong>COMPLETED</strong>
+        <span>완료 — 리스트 하단으로 이동</span>
+      </div>
+      <div class="status-item">
+        <div class="dot dot-muted"></div>
+        <strong>SKIPPED</strong>
+        <span>포기 — 집중 모드에서 포기 선택</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 FocusDo · <a href="mailto:jscompany0407@gmail.com">jscompany0407@gmail.com</a></p>
+    <p style="margin-top:8px"><a href="/app-ads.txt">app-ads.txt</a></p>
+  </footer>
+
 </body>
 </html>
