@@ -133,37 +133,6 @@
     .accent-red    { border-top: 3px solid #FF6B6B; }
     .accent-green  { border-top: 3px solid #4CAF50; }
 
-    .status-row {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .status-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: #1A1A1A;
-      border: 1px solid #2C2C2C;
-      border-radius: 14px;
-      padding: 18px 20px;
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .dot-gray   { background: #9E9E9E; }
-    .dot-purple { background: #6C63FF; box-shadow: 0 0 8px #6C63FF88; }
-    .dot-green  { background: #4CAF50; }
-    .dot-muted  { background: #616161; }
-
-    .status-item strong { font-size: 15px; }
-    .status-item span   { font-size: 13px; color: #9E9E9E; margin-left: auto; }
-
     footer {
       text-align: center;
       padding: 40px 24px;
@@ -186,7 +155,7 @@
       <span class="badge">🍎 iOS <span>준비 중</span></span>
     </div>
     <br>
-    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.tjdal.focusdo" target="_blank">
+    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.todofit.app&pcampaignid=web_share" target="_blank">
       ▶ Google Play에서 다운로드
     </a>
   </div>
@@ -213,32 +182,6 @@
         <div class="card-icon">📊</div>
         <h3>하루 결산 리포트</h3>
         <p>하루 집중 시간 합계, 완료율, 주간 통계 그래프로 나의 생산성을 시각화합니다.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>투두 상태 흐름</h2>
-    <div class="status-row">
-      <div class="status-item">
-        <div class="dot dot-gray"></div>
-        <strong>PENDING</strong>
-        <span>기본 상태 — 아직 시작 전</span>
-      </div>
-      <div class="status-item">
-        <div class="dot dot-purple"></div>
-        <strong>IN PROGRESS</strong>
-        <span>집중 모드 실행 중 — 타이머 동작</span>
-      </div>
-      <div class="status-item">
-        <div class="dot dot-green"></div>
-        <strong>COMPLETED</strong>
-        <span>완료 — 리스트 하단으로 이동</span>
-      </div>
-      <div class="status-item">
-        <div class="dot dot-muted"></div>
-        <strong>SKIPPED</strong>
-        <span>포기 — 집중 모드에서 포기 선택</span>
       </div>
     </div>
   </section>
